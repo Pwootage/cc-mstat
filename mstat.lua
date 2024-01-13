@@ -114,7 +114,7 @@ local function install(dest)
   end
 
   if disk then
-    print("Install from " .. disk.getDiskLabel() .. " mounted at " .. disk.getMountPath() .. "? (Y/n)")
+    print("Install from " .. (disk.getDiskLabel() or "<no label>") .. " mounted at " .. disk.getMountPath() .. "? (Y/n)")
     local input = read()
     if input == "y" or input == "Y" or input == "" then
       print("Installing from disk...")
@@ -159,7 +159,7 @@ local function createDisk()
 end
 
 local function boot()
-  local mstat = require("/mstat/lib/mstat-main");
+  local mstat = require("/mstat/lib/MStat");
   mstat.init()
 end
 
