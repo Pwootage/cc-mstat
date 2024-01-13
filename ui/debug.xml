@@ -1,7 +1,0 @@
-<frame>
-  <pane width="15" height="1" bg="gray" bgsymbol="#" x="1" y="1" />
-  <label text="Debug Logs" x="1" y="2" />
-  <button onClick="buttonClick" text="Click" x="1" y="3">
-
-  </button>
-</frame>

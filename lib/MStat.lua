@@ -16,7 +16,6 @@ function MStat:init()
   self.frames = {}
 
   self.homeFrame = self.mainFrame:addFrame("home")
-      :loadLayout("/mstat/ui/home.xml")
       :setPosition(1, 2)
       :setSize("{parent.w}", "{parent.h - 1}")
       :hide()
@@ -48,7 +47,10 @@ function MStat:showFrame(index)
 end
 
 function MStat:run()
-  self.mainMenu:selectItem(2)
+  -- self.mainMenu:selectItem(2)
+  -- for i = 1, 150 do
+  --   mstat.debug:log("Test", i)
+  -- end
   self.basalt.autoUpdate()
 end
 
@@ -56,10 +58,6 @@ local function init()
   print("Initializing mstat...")
   _G["mstat"] = MStat:new()
   mstat:init()
-
-  for i = 1, 150 do
-    mstat.debug:log("Test", i)
-  end
   mstat:run()
 end
 

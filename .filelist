@@ -1,4 +1,7 @@
 LICENSE
 mstat.lua
 lib/basalt.lua
-lib/mstat-main.lua
+lib/MStat.lua
+lib/MStatDebug.lua
+lib/MStatNet.lua
+ui/DebugFrame.lua
